@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
   if (host == 'music.163.com' || host == 'ip.ws.126.net') {
-    return 'PROXY ${SERVER_ADDR}:80';
+    return 'PROXY {{.Env.SERVER_ADDR}}:80';
   } else if (host == 'music.httpdns.c.163.com') {
     return 'PROXY 127.0.0.1:9999';
   }
