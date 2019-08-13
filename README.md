@@ -1,8 +1,20 @@
-# Unblock-netease-music
+# Unblock-netease-music 海外网易云音乐代理
 
-A Dockerized reverse proxy to unblock netease music outside mainland China.
+## 使用方法
 
-# Quick start
+打开hosts文件, 把以下加到hosts文件里
+```
+207.148.27.51     music.163.com
+```
+
+服务器位置在纽约, 整个北美都有不错的速度.
+
+## DNS服务
+
+如何需要DNS服务的人多, 我可以给服务器加入DNS支持. 欢迎提交Issue.
+
+## 自己搭建
+
 ```console
 docker build -t yizhiheng/unblock-netease-music .
 docker run -d --name unblock-netease-music \
@@ -13,7 +25,6 @@ docker run -d --name unblock-netease-music \
     yizhiheng/unblock-netease-music:latest
 
 # Replace X_REAL_IP with a random China IP, and SERVER_ADDR with your VPS IP address
-
 ```
 
 # Credit
